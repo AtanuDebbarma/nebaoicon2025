@@ -4,16 +4,21 @@
   align-items: center;
   height: 70%;
   width: 100%;
+  overflow: hidden;
 }
 
-.carouselContainer {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  background-position: center;
+.carouselTrack {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: calc(100% * (200% + 1));
+}
+
+.noTransition {
+  transition: none;
 }
 
 .carouselImage {
   height: 100%;
   width: 100%;
+  flex-shrink: 0;
 }

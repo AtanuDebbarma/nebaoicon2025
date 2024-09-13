@@ -1,7 +1,7 @@
 import Root from "./app/Root";
 
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <>
       <Root />
