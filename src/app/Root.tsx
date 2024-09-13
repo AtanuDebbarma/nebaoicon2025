@@ -9,7 +9,7 @@ import Contact from "./pages/ContactScreen/Contact";
 
 const Root: React.FC = () => {
   return (
-    <Router>
+    <Router basename="/nebaoicon2025">
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
