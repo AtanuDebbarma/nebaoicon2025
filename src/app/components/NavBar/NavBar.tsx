@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
 import logo from "../../../assets/tmp_logo.png";
+import useWindowSize from "../../utils/FindWindowSize";
 
 const NavBar: React.FC = () => {
+  const width = useWindowSize();
+  console.log(width);
   return (
     <div className={styles.navBarContainer}>
       <Link className={styles.logoContainer} to={"/home"}>
