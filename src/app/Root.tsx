@@ -6,10 +6,12 @@ import Papers from "./pages/PapersScreen/Papers";
 import Registration from "./pages/RegistrationScreen/Registration";
 import Gallery from "./pages/GalleryScreen/Gallery";
 import Contact from "./pages/ContactScreen/Contact";
+import TopBanner from "./components/TopBanner/TopBanner";
 
 const Root: React.FC = () => {
   return (
     <Router basename="/nebaoicon2025">
+      <TopBanner/>
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -1,39 +1,53 @@
-import { Link } from "react-router-dom";
+
 import styles from "./NavBar.module.css";
-import logo from "../../../assets/tmp_logo.png";
+// import logo from "../../../assets/tmp_logo.png";
 import useWindowSize from "../../utils/FindWindowSize";
+import hamburger from "../../../assets/icons/hamburger.png";
+import { useEffect, useState } from "react";
+import NavbarNormal from "./NavbarNormal";
+import NavBarModal from "./NavBarModal";
 
 const NavBar: React.FC = () => {
+  const [showHamburger, setShowHamburger] = useState<boolean>(false);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const width = useWindowSize();
-  console.log(width);
+  useEffect(() => {
+    setShowHamburger(width < 760);
+  }, [width]);
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
   return (
-    <div className={styles.navBarContainer}>
-      <Link className={styles.logoContainer} to={"/home"}>
+    <div
+      className={styles.navBarContainer}
+      style={width < 760 ? { justifyContent: "flex-start", height:"40px" } : {}}
+    >
+      {/* <Link
+        className={styles.logoContainer}
+        to={"/home"}
+        style={width < 798 ? { marginLeft: "4%" } : {}}
+      >
         <img src={logo} alt="Logo" className={styles.logoImage} />
-      </Link>
-      <div className={styles.buttonContainer}>
-        <Link to={"/home"} className={styles.navButtons}>
-          <h2 className={styles.navButtonText}>Home</h2>
-        </Link>
-        <Link to={"/highlights"} className={styles.navButtons}>
-          <h2 className={styles.navButtonText}>Highlights</h2>
-        </Link>
-        <Link to={"/papers"} className={styles.navButtons}>
-          <h2 className={styles.navButtonText}>Scientific Papers</h2>
-        </Link>
-        <Link to={"/registration"} className={styles.navButtons}>
-          <h2 className={styles.navButtonText}>Registration</h2>
-        </Link>
-        <Link to={"/gallery"} className={styles.navButtons}>
-          <h2 className={styles.navButtonText}>Gallery</h2>
-        </Link>
-        <Link to={"/contact"} className={styles.navButtons}>
-          <h2 className={styles.navButtonText}>Contact</h2>
-        </Link>
-        <Link to={""} className={styles.downloadButtonWrapper}>
-          <p className={styles.downloadButtonText}>Download Form</p>
-        </Link>
-      </div>
+      </Link> */}
+      {!showHamburger && <NavbarNormal />}
+
+      {showHamburger && (
+        <>
+          <div
+            className={styles.hamburgerContainer}
+            onClick={toggleModal}
+            style={{ marginLeft: "1%" }}
+          >
+            <img
+              src={hamburger}
+              alt="hamburger"
+              className={styles.hamburgerImage}
+            />
+          </div>
+
+          {isModalOpen && <NavBarModal toggleModal={toggleModal} />}
+        </>
+      )}
     </div>
   );
 };
