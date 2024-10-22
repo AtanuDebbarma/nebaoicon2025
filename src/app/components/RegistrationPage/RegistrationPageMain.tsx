@@ -1,11 +1,9 @@
 import { assetUrl } from "../../../../assets/data/assetUrl";
-import useWindowSize from "../../../../utils/FindWindowSize";
 import { CSSProperties } from "react";
 import { RegisterButton, TableMain } from "./RegistrationUI";
 
 const RegistrationPageMain = () => {
-  const { width } = useWindowSize();
-  const jsStyles = dynamicStyles(width);
+  const jsStyles = dynamicStyles(); // Removed deviceWidth as it's not used
   return (
     <div style={jsStyles.mainContainer}>
       <h2 style={jsStyles.header}>REGISTRATION FEES</h2>
@@ -17,9 +15,7 @@ const RegistrationPageMain = () => {
 
 export default RegistrationPageMain;
 
-const dynamicStyles = (
-  deviceWidth: number
-): { [key: string]: CSSProperties } => {
+const dynamicStyles = (): { [key: string]: CSSProperties } => {
   return {
     mainContainer: {
       display: "flex",
