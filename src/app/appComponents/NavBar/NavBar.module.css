@@ -76,7 +76,7 @@
 .hamburgerContainer {
   display: flex;
   height: 55%;
-  margin-right: 20%;
+  width: 8%;
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.2s ease;
   border-radius: 100%;
