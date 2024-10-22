@@ -67,7 +67,7 @@ const FooterMain = () => {
         </a>
         <span style={{ color: "#00e5ff" }}>|</span>
         <a
-          href="https://github.com/AdrD3vil/nebaoicon2025"
+          href="https://github.com/AdrD3vil/"
           target="blank"
           rel="noopener noreferrer"
           className={styles.footerLink}
