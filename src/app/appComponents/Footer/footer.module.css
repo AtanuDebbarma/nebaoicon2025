@@ -1,0 +1,63 @@
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-top: 3px solid #080975;
+  padding-top: 2%;
+  background-color: black;
+}
+.addressContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.addressWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+.addressHeader {
+  color: white;
+  text-align: center;
+  font-size: 1.3em;
+}
+.addressPara {
+  color: white;
+  text-align: center;
+  font-size: 1em;
+}
+
+.creatorFooterWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 3px solid #080975;
+  margin-top: 2%;
+}
+.footerLink {
+  color: #00e5ff;
+  text-align: center;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.footerLink:hover {
+  color: #0047d4;
+}
+
+@media (max-width: 700px) {
+  .addressHeader {
+    font-size: 0.8em;
+  }
+  .addressPara {
+    font-size: 0.7em;
+  }
+  .footerLink {
+    font-size: 0.6em;
+  }
+}

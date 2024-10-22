@@ -1,6 +1,5 @@
 .homeContainer{
     display: flex;
     background-color: #0e1385;
-    height: 100vh;
     flex-direction: column;
 }

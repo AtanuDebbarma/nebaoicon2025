@@ -1,18 +1,18 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import CarouselImage1 from "../../../../assets/carousel/carousel1.png";
-import CarouselImage2 from "../../../../assets/carousel/carousel2.png";
-import CarouselImage3 from "../../../../assets/carousel/carousel3.png";
-import CarouselImage4 from "../../../../assets/carousel/carousel4.png";
 import styles from "./Carousel.module.css";
-import arrowIcon from "../../../../assets/icons/arrow.png"; // Assuming this is your arrow image
+import { assetUrl } from "../../../../../assets/data/assetUrl";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const CustomLeftArrow = ({ onClick }: { onClick?: () => void }) => {
   return (
     <button className={`${styles.arrow} ${styles.leftArrow}`} onClick={onClick}>
       <div className={styles.arrowImageWrapperLeft}>
-        <img src={arrowIcon} alt="Previous" />
+        <FontAwesomeIcon
+          icon={assetUrl.leftArrow}
+          className={styles.arrowIcon}
+        />
       </div>
     </button>
   );
@@ -25,7 +25,10 @@ const CustomRightArrow = ({ onClick }: { onClick?: () => void }) => {
       onClick={onClick}
     >
       <div className={styles.arrowImageWrapperRight}>
-        <img src={arrowIcon} alt="Next" />
+        <FontAwesomeIcon
+          icon={assetUrl.rightArrow}
+          className={styles.arrowIcon}
+        />
       </div>
     </button>
   );
@@ -33,10 +36,10 @@ const CustomRightArrow = ({ onClick }: { onClick?: () => void }) => {
 
 const CustomCarousel: React.FC = () => {
   const images: string[] = [
-    CarouselImage1,
-    CarouselImage2,
-    CarouselImage3,
-    CarouselImage4,
+    assetUrl.Image1,
+    assetUrl.Image2,
+    assetUrl.Image3,
+    assetUrl.Image4,
   ];
 
   const responsive = {
@@ -58,12 +61,12 @@ const CustomCarousel: React.FC = () => {
     <div className={styles.container}>
       <Carousel
         swipeable={true}
-        draggable={false}
+        draggable={true}
         showDots={false}
         responsive={responsive}
         infinite={true}
         autoPlay={true}
-        autoPlaySpeed={4000}
+        autoPlaySpeed={3000}
         keyBoardControl={true}
         customTransition="all 1s"
         transitionDuration={1000}

@@ -1,0 +1,131 @@
+.navBarContainer {
+  background-color: #090a2d;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 15px;
+  position: sticky;
+  z-index: 1;
+  background-size: cover;
+  background-position: center;
+  text-decoration: none;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  height: 40%;
+}
+
+.navButtons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 1%;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  padding: 20px 20px;
+}
+
+.navButtonText {
+  color: #f5f6f8;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.navButtons:hover {
+  background-color: rgba(224, 224, 224, 0.3);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+.navButtons:hover .navButtonText {
+  color: #00e5ff;
+}
+
+.downloadButtonWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 4%;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  padding: 20px 20px;
+  border: 1.5px solid #28a745;
+  border-radius: 6px;
+  transition: color 0.3s ease;
+}
+
+.downloadButtonText {
+  color: #28a745;
+  font-weight: 600;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.downloadButtonWrapper:hover {
+  background-color: #28a745;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.downloadButtonWrapper:hover .downloadButtonText {
+  color: #f5f6f8;
+}
+.hamburgerContainer {
+  display: flex;
+  height: 55%;
+  margin-right: 20%;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  border-radius: 100%;
+  background-color: rgba(224, 224, 224, 0.196);
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+}
+
+.hamburgerContainer:active {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+.hamburgerImage {
+  height: 90%;
+  width: 90%;
+  object-fit: contain;
+  color: #f5f6f8;
+}
+
+/*-----------------------------Media queires-----------------------------*/
+
+@media (max-width: 1054px) {
+  .navButtons {
+    padding: 12px 12px;
+  }
+  .downloadButtonWrapper {
+    padding: 12px 12px;
+  }
+}
+
+@media (max-width: 970px) {
+  .navBarContainer {
+    height: 50px;
+  }
+  .navButtons {
+    margin-left: 1%;
+    padding: 5px 5px;
+  }
+  .buttonContainer {
+    margin-left: -1%;
+  }
+  .downloadButtonWrapper {
+    padding: 5px 5px;
+  }
+  .navButtonText {
+    font-size: 16px;
+  }
+  .downloadButtonText {
+    font-size: 16px;
+  }
+}
