@@ -87,36 +87,38 @@ export const RegisterButton = () => {
   );
 };
 
-const dynamicStyles = (deviceWidth: number): { [key: string]: CSSProperties } => {
-  return {
-    tableContainer: {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-    },
-    tableImage: {
-      width: "80%",
-      objectFit: "contain",
-    },
-    buttonContainer: {
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-      marginTop: "3%",
-      marginBottom: "5%",
-    },
-    button: {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      backgroundColor: "#28a745",
-      textDecoration: "none",
-      color: "white",
-      padding: "0px 15px",
-      borderRadius: "6px",
-      textAlign: "center",
-      transition: "background-color 0.3s ease, transform 0.1s ease",
-    },
+const dynamicStyles = () =>
+  // (deviceWidth: number): { [key: string]: CSSProperties } =>
+  {
+    return {
+      tableContainer: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      },
+      tableImage: {
+        width: "80%",
+        objectFit: "contain",
+      },
+      buttonContainer: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        marginTop: "3%",
+        marginBottom: "5%",
+      },
+      button: {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#28a745",
+        textDecoration: "none",
+        color: "white",
+        padding: "0px 15px",
+        borderRadius: "6px",
+        textAlign: "center",
+        transition: "background-color 0.3s ease, transform 0.1s ease",
+      },
+    };
   };
-};
