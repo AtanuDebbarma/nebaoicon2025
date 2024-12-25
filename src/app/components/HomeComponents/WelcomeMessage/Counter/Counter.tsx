@@ -12,7 +12,7 @@ type TimeLeft = {
 //component
 const Counter: React.FC = () => {
   const calculateTimeLeft = (): TimeLeft => {
-    const targetDate = new Date("2025-10-25T08:00:00");
+    const targetDate = new Date("2025-10-24T08:00:00");
     const currentTime = new Date();
     const difference = targetDate.getTime() - currentTime.getTime();
 

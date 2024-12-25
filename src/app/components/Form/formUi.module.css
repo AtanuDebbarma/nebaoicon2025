@@ -1,0 +1,213 @@
+.mainContainter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6e4e4;
+  width: 95%;
+  border-radius: 30px;
+  border: 5px solid #007bff;
+  margin-top: 5%;
+  margin-bottom: 1.5rem;
+  padding: 1%;
+}
+.generalInstructionsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+  justify-content: flex-start;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  padding: 1.7rem;
+  height: 1000px;
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 1000px;
+  align-items: center;
+  justify-content: flex-start;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  background-color: #002b47;
+  padding: 1.7rem;
+}
+.formHeader {
+  margin-top: 3%;
+  margin-bottom: 8%;
+  font-size: 1.75rem;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.instructionsH6Span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  font-size: 20px;
+}
+
+.instructionsPoints {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 1%;
+  margin-left: 2%;
+  font-size: 16px;
+}
+
+.formGrid {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.inputContainter {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.inputContainter input {
+  min-width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #dedede;
+  font-size: 14px;
+}
+
+.note {
+  margin-top: 5%;
+  color: #ffd700;
+  font-size: 12px;
+  text-align: center;
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8%;
+  padding: 13px 25px;
+  background-color: #28a745;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.caution {
+  color: transparent;
+}
+.button span {
+  color: white;
+  font-weight: 600;
+}
+.button:hover {
+  background-color: #218838;
+}
+.button:active {
+  transform: scale(0.95);
+  background-color: #1e7e34;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Tooltip styling */
+.iconWithTooltip {
+  position: relative;
+  display: inline-block;
+  margin-right: 1.5%;
+}
+
+.customTooltip {
+  position: absolute;
+  top: -30px; /* Adjust to position above the icon */
+  left: 40px;
+  transform: translateX(-50%);
+  background-color: red;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  border: 1px solid black;
+}
+.paymentDetailsContainer {
+  display: flex;
+  flex-direction: row;
+  min-width: 80%;
+  gap: 10px;
+}
+@media (max-width: 1000px) {
+  .mainContainter {
+    width: 88%;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .generalInstructionsContainer {
+    width: 100%;
+  }
+  .formContainer {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .iconWithTooltip {
+    margin-right: 0.8%;
+  }
+}
+@media (max-width: 700px) {
+  .formHeader {
+    font-size: 1rem;
+  }
+  .instructionsPoints {
+    font-size: 14px;
+  }
+  .generalInstructionsContainer {
+    height: 950px;
+  }
+  .formContainer {
+    height: 900px;
+  }
+  .customTooltip {
+    left: 50px;
+    top: -20px;
+    padding: 2px 4px;
+    font-size: 9px;
+  }
+  .paymentDetailsContainer{
+    min-width: 90%;
+    flex-direction: column;
+  }
+}
+@media (max-width: 420px) {
+  .inputContainter input {
+    font-size: 10px;
+    min-width: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  .formHeader {
+    font-size: 1rem;
+  }
+  .instructionsPoints {
+    font-size: 12px;
+  }
+  .instructionsH6Span {
+    font-size: 16px;
+  }
+  .generalInstructionsContainer {
+    height: 800px;
+  }
+}

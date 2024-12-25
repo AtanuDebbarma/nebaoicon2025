@@ -1,53 +1,43 @@
 import React, { useState } from "react";
-import { tableDataArray } from "../../../../data/tableData";
 import useWindowSize from "../../../../utils/FindWindowSize";
 import { CSSProperties } from "react";
 import { Link } from "react-router-dom";
+import { assetUrl } from "../../../../assets/data/assetUrl";
+import styles from "../HomeComponents/AboutEvent/aboutEvent.module.css";
 
-export const TableMain = () => {
+export const TableBody: React.FC = () => {
   const { width } = useWindowSize();
   const jsStyles = dynamicStyles(width);
 
   return (
     <div style={jsStyles.tableContainer}>
-      {tableDataArray.map((tableData, index) => (
-        <TableBody key={index} tableData={tableData} />
-      ))}
+      <img src={assetUrl.table} style={jsStyles.tableImage} />
     </div>
   );
 };
-
-interface TableBodyProps {
-  tableData: {
-    title: string;
-    rows: { label: string; value: string }[];
-  };
-}
-
-export const TableBody: React.FC<TableBodyProps> = ({ tableData }) => {
-  const { width } = useWindowSize();
-  const jsStyles = dynamicStyles(width);
-
+export const BankDetails: React.FC = () => {
   return (
-    <table style={jsStyles.table}>
-      <thead style={jsStyles.thead}>
-        <tr>
-          <th style={jsStyles.th} colSpan={2}>
-            {tableData.title}
-          </th>
-        </tr>
-      </thead>
-      <tbody style={jsStyles.tbody}>
-        {tableData.rows.map((row, index) => (
-          <tr key={index}>
-            {/* Label column */}
-            <td style={jsStyles.tdLabel}>{row.label}</td>
-            {/* Value column */}
-            <td style={jsStyles.tdValue}>{row.value}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <div className={styles.aboutContainer}>
+      <div className={styles.aboutWrapper}>
+        <div className={styles.headerWrapper}>
+          <h4>BANK DETAILS</h4>
+        </div>
+        <div className={styles.paragraphWrapper}>
+          <p>
+            Name : Association of Otolaryngologists of India Tripura State
+            Branch.
+            <br />
+            A/C No. : 30100114308
+            <br />
+            Bank Name : State Bank of India
+            <br />
+            IFSC Code : SBIN0004545
+            <br />
+            Branch : Kunjaban
+          </p>
+        </div>
+      </div>
+    </div>
   );
 };
 
@@ -73,7 +63,7 @@ export const RegisterButton = () => {
   return (
     <div style={jsStyles.buttonContainer}>
       <Link
-        to={""}
+        to={"/registration_form"}
         style={{
           ...jsStyles.button,
           backgroundColor: isPressed
@@ -82,6 +72,7 @@ export const RegisterButton = () => {
             ? "#218838"
             : "#28a745",
           transform: isPressed ? "scale(0.95)" : "scale(1)",
+          transition: "background-color 0.3s ease, transform 0.3s ease",
         }}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -100,46 +91,12 @@ const dynamicStyles = (deviceWidth: number): { [key: string]: CSSProperties } =>
   return {
     tableContainer: {
       display: "flex",
-      flexDirection: "row",
-      flexWrap: "wrap",
-      justifyContent: "space-evenly",
-      marginTop: "5%",
-      gap: deviceWidth <= 1024 ? "10px" : undefined,
+      justifyContent: "center",
+      alignItems: "center",
     },
-    table: {
-      width: deviceWidth <= 1024 ? "80%" : "22%",
-      minWidth: "250px",
-      borderCollapse: "collapse",
-      backgroundColor: "#e6e4e4",
-      color: "black",
-      marginBottom: "20px",
-    },
-    thead: {
-      textAlign: "center",
-      height: "90px",
-      backgroundColor: "#0e1385",
-      color: "white",
-    },
-    th: {
-      padding: "10px",
-      fontSize: "1.2rem",
-      fontWeight: "bold",
-      border: "2px solid #007bff",
-    },
-    tbody: {
-      fontWeight: "bolder",
-    },
-    tdLabel: {
-      padding: "10px",
-      textAlign: "left",
-      width: "60%",
-      border: "2px solid #007bff",
-    },
-    tdValue: {
-      padding: "10px",
-      textAlign: "left",
-      width: "40%",
-      border: "2px solid #007bff",
+    tableImage: {
+      width: "80%",
+      objectFit: "contain",
     },
     buttonContainer: {
       display: "flex",

@@ -22,7 +22,7 @@ const AboutEvent: React.FC = () => {
             Hospital, <br />
             Hapania, Agartala / Hotel Polo Towers, Agartala (Banquet).
             <br />
-            Date: 25th - 26th October 2025.
+            Date: 24th - 25th October 2025.
           </p>
         </div>
       </div>

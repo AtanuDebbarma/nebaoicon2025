@@ -23,7 +23,7 @@ const FooterMain = () => {
             <br />
             PIN: 799014
             <br />
-            Phone: +91 9436132654
+            Phone: +91-9436132654
           </p>
         </div>
         <div className={styles.addressWrapper}>

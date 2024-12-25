@@ -66,7 +66,7 @@ const CustomCarousel: React.FC = () => {
         responsive={responsive}
         infinite={true}
         autoPlay={true}
-        autoPlaySpeed={3000}
+        autoPlaySpeed={4000}
         keyBoardControl={true}
         customTransition="all 1s"
         transitionDuration={1000}

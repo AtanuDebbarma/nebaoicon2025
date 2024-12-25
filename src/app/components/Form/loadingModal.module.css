@@ -1,0 +1,65 @@
+._modalOverlay {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalBody {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 40%;
+  background-color: #e6e4e4;
+  border: 2px solid black;
+}
+.modalContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.modalContent h5 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+@keyframes clipSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.modalSpinner {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(54, 94, 215) rgb(54, 94, 215) transparent;
+  display: inline-block;
+  animation: clipSpin 0.75s linear infinite;
+}
+
+@media (max-width: 1200px) {
+  .modalBody {
+    width: 80%;
+    height: 30%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .modalBody {
+    width: 70%;
+    height: 20%;
+  }
+}

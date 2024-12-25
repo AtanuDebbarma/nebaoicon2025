@@ -8,11 +8,13 @@ const NavbarNormal: React.FC = () => {
   const location = useLocation(); // Get the current location
 
   // Determine if the current path matches each link's path
-  const isHomeActive = location.pathname === "/home" || location.pathname === "/";
+  const isHomeActive =
+    location.pathname === "/home" || location.pathname === "/";
   const isCommitteeActive = location.pathname === "/committee";
   const isProgrammeActive = location.pathname === "/programme";
   const isRegistrationActive = location.pathname === "/registration";
   const isContactActive = location.pathname === "/contact";
+  const isForm = location.pathname === "/registration_form";
 
   return (
     <div className={styles.buttonContainer}>
@@ -61,11 +63,16 @@ const NavbarNormal: React.FC = () => {
           Contact
         </h2>
       </Link>
-      <Link to={""} className={styles.downloadButtonWrapper}>
-        <p className={styles.downloadButtonText} style={jsStyles.linkText}>
-          Register Now
-        </p>
-      </Link>
+      {!isForm && (
+        <Link
+          to={"/registration_form"}
+          className={styles.downloadButtonWrapper}
+        >
+          <p className={styles.downloadButtonText} style={jsStyles.linkText}>
+            Register Now
+          </p>
+        </Link>
+      )}
     </div>
   );
 };

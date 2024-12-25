@@ -2,9 +2,12 @@ import styles from "./topbanner.module.css";
 import useWindowSize from "../../../../utils/FindWindowSize";
 import { assetUrl } from "../../../../assets/data/assetUrl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link, useLocation } from "react-router-dom";
 
 const TopBanner: React.FC = () => {
   const { width } = useWindowSize();
+  const location = useLocation();
+  const isForm = location.pathname === "/registration_form";
 
   return (
     <div>
@@ -18,18 +21,18 @@ const TopBanner: React.FC = () => {
             className={styles.Icon}
             style={{ marginRight: "2%" }}
           />
-          <p style={{ marginRight: "5%" }}>12345xyz@xyz.com</p>
+          <p style={{ marginRight: "5%" }}>nebaoicon.2025@gmail.com</p>
           <FontAwesomeIcon
             icon={assetUrl.phoneIcon}
             className={styles.Icon}
             style={{ marginRight: "2%" }}
           />
-          <p>+91 1234567890</p>
+          <p>+91-9436132654</p>
         </div>
-        {width <= 700 ? (
-          <div className={styles.buttonContainer}>
+        {width <= 700 && !isForm ? (
+          <Link to={"/registration_form"} className={styles.buttonContainer}>
             <button>Register Now</button>
-          </div>
+          </Link>
         ) : (
           <div></div>
         )}

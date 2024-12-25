@@ -1,13 +1,14 @@
 import { assetUrl } from "../../../../assets/data/assetUrl";
 import { CSSProperties } from "react";
-import { RegisterButton, TableMain } from "./RegistrationUI";
+import { BankDetails, RegisterButton, TableBody } from "./RegistrationUI";
 
 const RegistrationPageMain = () => {
-  const jsStyles = dynamicStyles(); // Removed deviceWidth as it's not used
+  const jsStyles = dynamicStyles();
   return (
     <div style={jsStyles.mainContainer}>
       <h2 style={jsStyles.header}>REGISTRATION FEES</h2>
-      <TableMain />
+      <TableBody />
+      <BankDetails/>
       <RegisterButton />
     </div>
   );
@@ -31,7 +32,7 @@ const dynamicStyles = (): { [key: string]: CSSProperties } => {
       justifyContent: "center",
       alignItems: "center",
       fontFamily: "Arial, Helvetica, sans-serif",
-      marginTop: "5%",
+      marginTop: "3%",
       color: "white",
     },
   };

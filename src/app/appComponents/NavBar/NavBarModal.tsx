@@ -1,10 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import styles from "./modal.module.css";
 interface toggleType {
   toggleModal: () => void;
 }
 
 const NavBarModal: React.FC<toggleType> = ({ toggleModal }) => {
+  const location = useLocation();
+  const isForm = location.pathname === "/registration_form";
+
   return (
     <div className={styles.modalOverlay} onClick={toggleModal}>
       <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
@@ -39,11 +42,16 @@ const NavBarModal: React.FC<toggleType> = ({ toggleModal }) => {
         >
           Contact
         </Link>
-        <Link to={""} className={styles.modalLink} onClick={toggleModal}
-        style={{border: "1px solid #28a745", color:"#28a745"}}
-        >
-          Register Now
-        </Link>
+        {!isForm && (
+          <Link
+            to={"/registration_form"}
+            className={styles.modalLink}
+            onClick={toggleModal}
+            style={{ border: "1px solid #28a745", color: "#28a745" }}
+          >
+            Register Now
+          </Link>
+        )}
       </div>
     </div>
   );
