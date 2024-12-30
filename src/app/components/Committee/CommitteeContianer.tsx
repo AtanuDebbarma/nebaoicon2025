@@ -29,12 +29,35 @@ const CommitteeContianer: React.FC = () => {
           textSubHeader1="Oranizing Secretary"
         />
         <Card
+          imageSrc={assetUrl.satyakamChak_13}
+          textHeader="Dr. Satyakam Chakraborty"
+          textSubHeader1="Joint Secretary"
+        />
+      </div>
+      <div style={jsStyles.row}>
+        <Card
+          imageSrc={assetUrl.laxmanBhatt_10}
+          textHeader="Dr. Laxman Bhattacharjee"
+          textSubHeader1="Joint Secretary"
+        />
+        <Card
           imageSrc={assetUrl.bishanathDas_4}
           textHeader="Dr. Biswanath Das"
           textSubHeader1="Treasurer"
         />
+        <Card
+          imageSrc={assetUrl.biplabNath_6}
+          textHeader="Prof.(Dr.) Biplab Nath"
+          textSubHeader1="Chairman Scientific Committee"
+        />
       </div>
       <div style={jsStyles.row}>
+        <Card
+          imageSrc={assetUrl.prabrataSinha_7}
+          textHeader="Dr. Priyabrata Sinha"
+          textSubHeader1="Chairman,Event"
+          textSubHeader2="Management Committee"
+        />
         <Card
           imageSrc={assetUrl.tarunGuha_5}
           textHeader="Dr. Tarun Guha"
@@ -42,36 +65,18 @@ const CommitteeContianer: React.FC = () => {
           textSubHeader2="Hospitality Committee"
         />
         <Card
-          imageSrc={assetUrl.biplabNath_6}
-          textHeader="Prof.(Dr.) Biplab Nath"
-          textSubHeader1="Chairman Scientific Committee"
-        />
-        <Card
-          imageSrc={assetUrl.prabrataSinha_7}
-          textHeader="Dr. Priyabrata Sinha"
-          textSubHeader1="Chairman,Event"
-          textSubHeader2="Management Committee"
-        />
-      </div>
-      <div style={jsStyles.row}>
-        <Card
           imageSrc={assetUrl.tanoyDeb_8}
           textHeader="Dr. Tanmoy Deb"
           textSubHeader1="Chairman, Souvenir and"
           textSubHeader2="Journal Committee"
         />
+      </div>
+      <div style={jsStyles.row}>
         <Card
           imageSrc={assetUrl.sankarSarkar_9}
           textHeader="Dr. Sankar Sarkar"
           textSubHeader1="Chairman Refreshment Committee"
         />
-        <Card
-          imageSrc={assetUrl.laxmanBhatt_10}
-          textHeader="Dr. Laxman Bhattacharjee"
-          textSubHeader1="Joint Secretary"
-        />
-      </div>
-      <div style={jsStyles.row}>
         <Card
           imageSrc={
             "https://res.cloudinary.com/dyoefmx3t/image/upload/v1731177944/xxx_ikosij.png"
@@ -87,11 +92,6 @@ const CommitteeContianer: React.FC = () => {
           textHeader="Dr. Karnajit Debroy"
           textSubHeader1="Chairman,"
           textSubHeader2="Transportation Committee"
-        />
-        <Card
-          imageSrc={assetUrl.satyakamChak_13}
-          textHeader="Dr. Satyakam Chakraborty"
-          textSubHeader1="Joint Secretary"
         />
       </div>
     </div>
