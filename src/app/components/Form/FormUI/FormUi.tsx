@@ -16,9 +16,10 @@ export interface FormValues {
   zip: string;
   email: string;
   phone: string;
-  paymentDetails: string;
-  date: string;
   amount: string;
+  date: string;
+  mode: string;
+  paymentDetails: string;
 }
 export type Errors = {
   name?: string;
@@ -30,9 +31,10 @@ export type Errors = {
   zip?: string;
   email?: string;
   phone?: string;
-  paymentDetails?: string;
   amount?: string;
   date?: string;
+  mode?: string;
+  paymentDetails?: string;
   error?: string;
 };
 
@@ -47,9 +49,10 @@ export const Form: React.FC = () => {
     zip: "",
     email: "",
     phone: "",
-    paymentDetails: "",
-    date: "",
     amount: "",
+    date: "",
+    mode: "",
+    paymentDetails: "",
   };
   const [formValues, setFormValues] = useState<FormValues>(initialFormValues);
   const [errors, setErrors] = useState<Errors>({
@@ -62,9 +65,10 @@ export const Form: React.FC = () => {
     zip: "",
     email: "",
     phone: "",
-    paymentDetails: "",
     amount: "",
     date: "",
+    mode: "",
+    paymentDetails: "",
     error: "",
   });
   const navigate = useNavigate();
@@ -150,33 +154,42 @@ export const Form: React.FC = () => {
           handleChange={(e) => handleChange(e, setFormValues, setErrors)}
         />
         <FormInputs
+          error={errors.amount}
+          inputType="text"
+          inputName="amount"
+          inputPlaceholder="Amount"
+          inputValue={formValues.amount}
+          handleChange={(e) => handleChange(e, setFormValues, setErrors)}
+        />
+        <FormInputs
+          error={errors.date}
+          inputType="text"
+          inputName="date"
+          inputPlaceholder="Date of Transaction - dd/mm/yyyy"
+          inputValue={formValues.date}
+          handleChange={(e) => handleChange(e, setFormValues, setErrors)}
+        />
+        <FormInputs
+          error={errors.mode}
+          inputType="select"
+          inputName="mode"
+          inputPlaceholder="Mode of Payment"
+          inputValue={formValues.mode}
+          handleChange={(e) => handleChange(e, setFormValues, setErrors)}
+          options={[
+            { value: "", label: "Select Mode of Payment" }, // Default option
+            { value: "UPI", label: "UPI" },
+            { value: "Bank Transfer", label: "Bank Transfer" },
+          ]}
+        />
+        <FormInputs
           error={errors.paymentDetails}
           inputType="text"
           inputName="paymentDetails"
-          inputPlaceholder="UPI/RTGS/NEFT Transaction ID"
+          inputPlaceholder="Transaction ID"
           inputValue={formValues.paymentDetails}
           handleChange={(e) => handleChange(e, setFormValues, setErrors)}
         />
-        <div className={styles.paymentDetailsContainer}>
-          <FormInputs
-            error={errors.amount}
-            inputType="text"
-            inputName="amount"
-            inputPlaceholder="Amount"
-            inputValue={formValues.amount}
-            handleChange={(e) => handleChange(e, setFormValues, setErrors)}
-            minWidth="100%"
-          />
-          <FormInputs
-            error={errors.date}
-            inputType="text"
-            inputName="date"
-            inputPlaceholder="Date of Transaction - dd/mm/yyyy"
-            inputValue={formValues.date}
-            handleChange={(e) => handleChange(e, setFormValues, setErrors)}
-            minWidth="100%"
-          />
-        </div>
       </div>
       <p className={styles.note}>
         N.B: Post Graduate students must submit authorization letter from head

@@ -18,11 +18,9 @@ const AboutEvent: React.FC = () => {
             <br />
             Venue: International convention centre (Agartala international fair
             ground) , <br />
-            Hapania, Agartala / Tripura Medical College & Dr. BRAM Teaching
-            Hospital, <br />
-            Hapania, Agartala / Hotel Polo Towers, Agartala (Banquet).
+            Hapania, Agartala
             <br />
-            Date: 24th - 25th October 2025.
+            Date: 14th - 15th November 2025.
           </p>
         </div>
       </div>

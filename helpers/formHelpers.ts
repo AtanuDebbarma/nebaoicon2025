@@ -7,6 +7,7 @@ import {
   validateDate,
   validateDesignation,
   validateEmail,
+  validateMode,
   validateName,
   validatePhoneNumber,
   validateRegistrationNo,
@@ -47,6 +48,7 @@ export const handleSubmit = async (
       : undefined;
   const amountError = validateAmount(trimmedValues.amount);
   const dateError = validateDate(trimmedValues.date);
+  const modeError = validateMode(trimmedValues.mode);
 
   const newErrors = {
     name: nameError,
@@ -58,9 +60,10 @@ export const handleSubmit = async (
     zip: zipError,
     email: emailError,
     phone: phoneError,
-    paymentDetails: paymentError,
     amount: amountError,
     date: dateError,
+    mode: modeError,
+    paymentDetails: paymentError,
   };
 
   // Update the errors state
@@ -129,9 +132,10 @@ export const handleSubmit = async (
     ZIP: trimmedValues.zip,
     Email: trimmedValues.email,
     Phone: trimmedValues.phone,
-    "Transaction ID": trimmedValues.paymentDetails,
     Amount: trimmedValues.amount,
     "Date Of Transaction": trimmedValues.date,
+    Mode: trimmedValues.mode,
+    "Transaction ID": trimmedValues.paymentDetails,
   });
 
   const sheetData = mapFormValuesToSheetFields(trimmedValues);
@@ -165,7 +169,7 @@ export const handleSubmit = async (
 
 // Handle input changes
 export const handleChange = (
-  e: React.ChangeEvent<HTMLInputElement>,
+  e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
   setFormValues: React.Dispatch<React.SetStateAction<FormValues>>,
   setErrors: React.Dispatch<React.SetStateAction<Errors>>
 ) => {

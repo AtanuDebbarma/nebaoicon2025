@@ -24,6 +24,8 @@ const FooterMain = () => {
             PIN: 799014
             <br />
             Phone: +91-9436132654
+            <br />
+            Email: nebaoicon.2025@gmail.com
           </p>
         </div>
         <div className={styles.addressWrapper}>
@@ -39,7 +41,10 @@ const FooterMain = () => {
           ></iframe>
         </div>
       </div>
-      <div className={styles.creatorFooterWrapper}  style={{ marginTop: width <= 768 ? "5%" : "2%" }}>
+      <div
+        className={styles.creatorFooterWrapper}
+        style={{ marginTop: width <= 768 ? "5%" : "2%" }}
+      >
         <p
           className={styles.addressPara}
           style={{ fontSize: width <= 700 ? "0.6em" : "1em" }}
@@ -67,7 +72,7 @@ const FooterMain = () => {
         </a>
         <span style={{ color: "#00e5ff" }}>|</span>
         <a
-          href="https://github.com/AdrD3vil/"
+          href="https://github.com/AtanuDebbarma/"
           target="blank"
           rel="noopener noreferrer"
           className={styles.footerLink}

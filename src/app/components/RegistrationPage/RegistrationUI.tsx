@@ -4,6 +4,7 @@ import { CSSProperties } from "react";
 import { Link } from "react-router-dom";
 import { assetUrl } from "../../../../assets/data/assetUrl";
 import styles from "../HomeComponents/AboutEvent/aboutEvent.module.css";
+import styles2 from "./regUI.module.css";
 
 export const TableBody: React.FC = () => {
   const { width } = useWindowSize();
@@ -16,25 +17,38 @@ export const TableBody: React.FC = () => {
   );
 };
 export const BankDetails: React.FC = () => {
+  const { width } = useWindowSize();
+  const jsStyles = dynamicStyles(width);
   return (
     <div className={styles.aboutContainer}>
       <div className={styles.aboutWrapper}>
         <div className={styles.headerWrapper}>
           <h4>BANK DETAILS</h4>
         </div>
-        <div className={styles.paragraphWrapper}>
-          <p>
-            Name : Association of Otolaryngologists of India Tripura State
-            Branch.
-            <br />
-            A/C No. : 30100114308
-            <br />
-            Bank Name : State Bank of India
-            <br />
-            IFSC Code : SBIN0004545
-            <br />
-            Branch : Kunjaban
-          </p>
+        <div className={styles2.detailsContainer}>
+          <div
+            className={styles.paragraphWrapper}
+            style={jsStyles.paragraphWrapper}
+          >
+            <p>
+              Name : Association of Otolaryngologists of India Tripura State
+              Branch.
+              <br />
+              A/C No. : 30100114308
+              <br />
+              Bank Name : State Bank of India
+              <br />
+              IFSC Code : SBIN0004545
+              <br />
+              Branch : Kunjaban
+            </p>
+          </div>
+          <div style={jsStyles.qrWrapper}>
+            <span className={styles2.qrCode}>
+              UPI ID: associationofotolaryngologist@sbi
+            </span>
+            <img src={assetUrl.QRCode} className={styles2.qrImage} />
+          </div>
         </div>
       </div>
     </div>
@@ -119,6 +133,17 @@ const dynamicStyles = (
       borderRadius: "6px",
       textAlign: "center",
       transition: "background-color 0.3s ease, transform 0.1s ease",
+    },
+    paragraphWrapper: {
+      marginLeft: "1%",
+      width: "50%",
+    },
+    qrWrapper: {
+      display: "flex",
+      flexDirection: "column",
+      width: deviceWidth > 780 ? "50%" : "90%",
+      justifyContent: "center",
+      alignItems: "center",
     },
   };
 };

@@ -21,13 +21,13 @@
   border: 2px solid #007bff;
   border-radius: 10px;
   padding: 1.7rem;
-  height: 1000px;
+  height: 1100px;
 }
 .formContainer {
   display: flex;
   flex-direction: column;
   width: 50%;
-  height: 1000px;
+  height: 1100px;
   align-items: center;
   justify-content: flex-start;
   border: 2px solid #007bff;
@@ -61,6 +61,14 @@
   margin-left: 2%;
   font-size: 16px;
 }
+.qrImage {
+  margin-top: 1%;
+  margin-left: 2%;
+  width: 25%;
+  padding: 5px;
+  border: 1px solid black;
+  align-self: start;
+}
 
 .formGrid {
   display: flex;
@@ -86,6 +94,18 @@
   border-radius: 4px;
   background-color: #dedede;
   font-size: 14px;
+}
+.inputContainter select {
+  min-width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #dedede;
+  font-size: 14px;
+  color: gray;
+}
+.inputContainter select option {
+  color: #000; /* Option text color */
 }
 
 .note {
@@ -174,10 +194,10 @@
     font-size: 14px;
   }
   .generalInstructionsContainer {
-    height: 950px;
+    height: 1070px;
   }
   .formContainer {
-    height: 900px;
+    height: 990px;
   }
   .customTooltip {
     left: 50px;
@@ -185,13 +205,20 @@
     padding: 2px 4px;
     font-size: 9px;
   }
-  .paymentDetailsContainer{
+  .paymentDetailsContainer {
     min-width: 90%;
     flex-direction: column;
+  }
+  .qrImage {
+    width: 50%;
   }
 }
 @media (max-width: 420px) {
   .inputContainter input {
+    font-size: 10px;
+    min-width: 90%;
+  }
+  .inputContainter select {
     font-size: 10px;
     min-width: 90%;
   }
@@ -208,6 +235,6 @@
     font-size: 16px;
   }
   .generalInstructionsContainer {
-    height: 800px;
+    height: 900px;
   }
 }

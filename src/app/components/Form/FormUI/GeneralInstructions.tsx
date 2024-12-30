@@ -14,11 +14,11 @@ export const GeneralInstructions = () => {
           of registration process.
         </h6>
       </span>
-      <span className={styles.instructionsH6Span} style={{ marginTop: "3%" }}>
+      <span className={styles.instructionsH6Span}>
         <FontAwesomeIcon icon={assetUrl.rightArrow} />
         <h6>&nbsp; How to register</h6>
       </span>
-      <span className={styles.instructionsPoints}>
+      <span className={styles.instructionsPoints} style={{marginTop:"0px"}}>
         <strong>BANK DETAILS:</strong>
       </span>
       <p className={styles.instructionsPoints}>
@@ -30,8 +30,12 @@ export const GeneralInstructions = () => {
         IFSC Code :SBIN0004545 <br />
         Branch : Kunjaban
       </p>
+      <span className={styles.instructionsPoints} style={{marginTop:"0px"}}>
+        <strong>UPI ID:</strong>&nbsp;associationofotolaryngologist@sbi
+      </span>
+      <img src={assetUrl.QRCode} className={styles.qrImage}/>
       <span className={styles.instructionsPoints}>
-        1. Make payment to the above bank account online or offline.
+        1. Make payment to the above bank account or UPI ID.
       </span>
       <span className={styles.instructionsPoints}>
         2. Get the Transaction ID

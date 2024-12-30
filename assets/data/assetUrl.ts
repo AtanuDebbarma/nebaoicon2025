@@ -10,6 +10,7 @@ import CarouselImage1 from "../carousel/carousel1.png";
 import CarouselImage2 from "../carousel/carousel2.png";
 import CarouselImage3 from "../carousel/carousel3.png";
 import CarouselImage4 from "../carousel/carousel4.png";
+import CarouselImage5 from "../carousel/carousel5.png";
 import Table from "../carousel/table.png";
 
 export const assetUrl = {
@@ -19,7 +20,7 @@ export const assetUrl = {
   emailIcon: faEnvelope,
   phoneIcon: faPhone,
   topBanner:
-    "https://res.cloudinary.com/dyoefmx3t/image/upload/v1730310732/top_banner_kyogb9.png",
+    "https://res.cloudinary.com/dyoefmx3t/image/upload/v1735478499/top_banner_ytxjnm.png",
   welcomeGradiant:
     "https://res.cloudinary.com/dyoefmx3t/image/upload/v1729439541/Gradient_ram9xa.png",
   aboutGradiant:
@@ -28,10 +29,13 @@ export const assetUrl = {
   Image2: CarouselImage2,
   Image3: CarouselImage3,
   Image4: CarouselImage4,
+  Image5: CarouselImage5,
   rightArrow: faAngleRight,
   leftArrow: faAngleLeft,
   table: Table,
   exclaim: faCircleExclamation,
+  QRCode:
+    "https://res.cloudinary.com/dyoefmx3t/image/upload/v1735546831/QR_wtcmzl.jpg",
   programPhoto:
     "https://res.cloudinary.com/dyoefmx3t/image/upload/v1731142531/new_hhwsxg.png",
   contactUsPhoto:

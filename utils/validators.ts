@@ -155,6 +155,13 @@ export const validateAmount = (amount: string): string | undefined => {
   return undefined; // No errors
 };
 
+export const validateMode = (mode: string): string | undefined => {
+  if (!mode) return "Mode of Payment is required.";
+  if (!["UPI", "Bank Transfer"].includes(mode))
+    return "Invalid Mode of Payment.";
+  return undefined;
+};
+
 export const trimFormValues = (formValues: FormValues): FormValues => {
   return Object.fromEntries(
     Object.entries(formValues).map(([key, value]) => [

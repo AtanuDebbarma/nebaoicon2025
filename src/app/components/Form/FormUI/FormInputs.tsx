@@ -9,8 +9,11 @@ interface FormInputsProps {
   inputName: string;
   inputPlaceholder: string;
   inputValue: string;
-  handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  handleChange: (
+    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => void;
   minWidth?: string;
+  options?: { value: string; label: string }[]; // For dropdown options
 }
 
 export const FormInputs: React.FC<FormInputsProps> = ({
@@ -21,8 +24,10 @@ export const FormInputs: React.FC<FormInputsProps> = ({
   inputValue,
   handleChange,
   minWidth,
+  options,
 }) => {
-  const jsStyles = dynamicStyles(error, minWidth);
+  const jsStyles = dynamicStyles(error, minWidth, inputValue);
+
   return (
     <div className={styles.inputContainter}>
       <div className={styles.iconWithTooltip}>
@@ -33,27 +38,44 @@ export const FormInputs: React.FC<FormInputsProps> = ({
         />
         {error && <div className={styles.customTooltip}>{error}</div>}
       </div>
-      <input
-        type={inputType}
-        name={inputName}
-        placeholder={inputPlaceholder}
-        value={inputValue}
-        onChange={handleChange}
-        style={jsStyles.propsInput}
-      />
+      {inputType === "select" ? (
+        <select
+          name={inputName}
+          value={inputValue}
+          onChange={handleChange}
+          style={jsStyles.propsInput}
+        >
+          {options?.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
+        </select>
+      ) : (
+        <input
+          type={inputType}
+          name={inputName}
+          placeholder={inputPlaceholder}
+          value={inputValue}
+          onChange={handleChange}
+          style={jsStyles.propsInput}
+        />
+      )}
     </div>
   );
 };
 
 const dynamicStyles = (
   error?: string,
-  minWidth?: string
+  minWidth?: string,
+  value?: string
 ): { [key: string]: CSSProperties } => {
   return {
     propsInput: {
       border: error ? "1px solid red" : undefined,
       backgroundColor: error ? "#f4cbcb" : undefined,
       minWidth: minWidth || undefined,
+      color: value != "" ? "black" : "gray",
     },
   };
 };

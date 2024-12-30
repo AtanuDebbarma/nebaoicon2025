@@ -11,7 +11,7 @@ const MessageSection: React.FC = () => {
         It’s a privilege for AOI- Tripura State Branch, to get an opportunity to
         organize the flagship conference of the Otorhinolaryngologists of North
         East India. AOI-TSB will be hosting the 36th NEBAOICON in the city of
-        Agartala which is scheduled to be held from 24th - 25th October, 2025.
+        Agartala which is scheduled to be held from 14th - 15th November, 2025.
         While we aim to invite eminent national level resource persons for
         scientific deliberations, we will also provide platform for young
         prodigies of North East to showcase their talent.

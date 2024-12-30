@@ -40,6 +40,7 @@ const CustomCarousel: React.FC = () => {
     assetUrl.Image2,
     assetUrl.Image3,
     assetUrl.Image4,
+    assetUrl.Image5,
   ];
 
   const responsive = {
