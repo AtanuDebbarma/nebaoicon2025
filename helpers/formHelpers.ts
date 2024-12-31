@@ -2,6 +2,7 @@
 import { FormValues, Errors } from "../src/app/components/Form/FormUI/FormUi";
 import {
   trimFormValues,
+  validateaccompanyingPersons,
   validateAmount,
   validateCity,
   validateDate,
@@ -49,11 +50,15 @@ export const handleSubmit = async (
   const amountError = validateAmount(trimmedValues.amount);
   const dateError = validateDate(trimmedValues.date);
   const modeError = validateMode(trimmedValues.mode);
+  const accompanyingPersonsError = validateaccompanyingPersons(
+    trimmedValues.accompanyingPersons
+  );
 
   const newErrors = {
     name: nameError,
     designation: designationError,
     registrationNo: registrationNoError,
+    accompanyingPersons: accompanyingPersonsError,
     address: addressError,
     city: cityError,
     state: stateError,
@@ -77,7 +82,7 @@ export const handleSubmit = async (
   if (hasError) return;
 
   setSubmitting(true);
-  setMessage("Submitting Form.");
+  setMessage("Submitting Form. Please Don't Refresh or Close the Browser");
   // Wait 1.5 seconds before checking for duplicates
   await new Promise((resolve) => setTimeout(resolve, 1500));
 
@@ -126,6 +131,7 @@ export const handleSubmit = async (
     Name: trimmedValues.name,
     Designation: trimmedValues.designation,
     "NEBAOI Registration No": trimmedValues.registrationNo,
+    "Accompanying Persons": trimmedValues.accompanyingPersons,
     Address: trimmedValues.address,
     City: trimmedValues.city,
     State: trimmedValues.state,

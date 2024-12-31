@@ -27,7 +27,7 @@ export const assetUrl = {
   Image3:
     "https://res.cloudinary.com/dyoefmx3t/image/upload/v1735627160/carousel3_wo1ea7.png",
   Image4:
-    "https://res.cloudinary.com/dyoefmx3t/image/upload/v1735627161/carousel4_garpjp.png",
+    "https://res.cloudinary.com/dyoefmx3t/image/upload/v1735644731/pilak_ghsw3g.png",
   Image5:
     "https://res.cloudinary.com/dyoefmx3t/image/upload/v1735627161/carousel5_aeytje.png",
   rightArrow: faAngleRight,

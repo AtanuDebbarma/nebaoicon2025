@@ -161,6 +161,14 @@ export const validateMode = (mode: string): string | undefined => {
     return "Invalid Mode of Payment.";
   return undefined;
 };
+export const validateaccompanyingPersons = (
+  accompanyingPersons: string
+): string | undefined => {
+  if (!accompanyingPersons) return "Accompanying persons is required.";
+  if (!["None", "1", "2", "3", "4"].includes(accompanyingPersons))
+    return "Invalid Accompanying persons!";
+  return undefined;
+};
 
 export const trimFormValues = (formValues: FormValues): FormValues => {
   return Object.fromEntries(

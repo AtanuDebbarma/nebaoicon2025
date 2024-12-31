@@ -1,7 +1,7 @@
 .mainContainer {
   display: flex;
   overflow: auto;
-  background-color: black;
+  background-color: #151515;
   width: 100%;
   height: 80vh;
 }
@@ -33,6 +33,11 @@
 .image {
   width: 100%;
   height: 100%;
+}
+.clipLoader{
+  display: flex;
+  position: absolute;
+  margin-top: 200px;
 }
 
 @media (max-width: 1024px) {

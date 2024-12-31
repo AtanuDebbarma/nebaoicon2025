@@ -10,6 +10,7 @@ export interface FormValues {
   name: string;
   designation: string;
   registrationNo: string;
+  accompanyingPersons:string;
   address: string;
   city: string;
   state: string;
@@ -25,6 +26,7 @@ export type Errors = {
   name?: string;
   designation?: string;
   registrationNo?: string;
+  accompanyingPersons?:string;
   address?: string;
   city?: string;
   state?: string;
@@ -43,6 +45,7 @@ export const Form: React.FC = () => {
     name: "",
     designation: "",
     registrationNo: "",
+    accompanyingPersons:"",
     address: "",
     city: "",
     state: "",
@@ -59,6 +62,7 @@ export const Form: React.FC = () => {
     name: "",
     designation: "",
     registrationNo: "",
+    accompanyingPersons:"",
     address: "",
     city: "",
     state: "",
@@ -104,6 +108,25 @@ export const Form: React.FC = () => {
           inputPlaceholder="NEBAOI Registration No"
           inputValue={formValues.registrationNo}
           handleChange={(e) => handleChange(e, setFormValues, setErrors)}
+        />
+        <FormInputs
+          error={errors.mode}
+          inputType="select"
+          inputName="accompanyingPersons"
+          inputPlaceholder="Accompanying persons(Charges as applicable)"
+          inputValue={formValues.accompanyingPersons}
+          handleChange={(e) => handleChange(e, setFormValues, setErrors)}
+          options={[
+            {
+              value: "",
+              label: "Accompanying persons(Charges as applicable)",
+            }, // Default option
+            { value: "None", label: "None" },
+            { value: "1", label: "1" },
+            { value: "2", label: "2" },
+            { value: "3", label: "3" },
+            { value: "4", label: "4" },
+          ]}
         />
         <FormInputs
           error={errors.address}

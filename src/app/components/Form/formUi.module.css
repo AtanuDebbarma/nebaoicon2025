@@ -21,13 +21,13 @@
   border: 2px solid #007bff;
   border-radius: 10px;
   padding: 1.7rem;
-  height: 1100px;
+  height: 1150px;
 }
 .formContainer {
   display: flex;
   flex-direction: column;
   width: 50%;
-  height: 1100px;
+  height: 1150px;
   align-items: center;
   justify-content: flex-start;
   border: 2px solid #007bff;
@@ -213,13 +213,13 @@
     width: 50%;
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 500px) {
   .inputContainter input {
     font-size: 10px;
     min-width: 90%;
   }
   .inputContainter select {
-    font-size: 10px;
+    font-size: 9px;
     min-width: 90%;
   }
 }

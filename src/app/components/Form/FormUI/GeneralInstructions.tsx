@@ -53,11 +53,11 @@ export const GeneralInstructions = () => {
       </span>
       <span className={styles.instructionsPoints}>
         2. 25% registration money will be deducted if cancelled on or before
-        30th of June 2025, 50% will be deducted on cancellation on or before
-        31st August 2025.
+        31st of July 2025, 50% will be deducted on cancellation on or before
+        30th September 2025.
       </span>
       <span className={styles.instructionsPoints}>
-        3. No refund will be made on cancellation after 31st of August 2025.
+        3. No refund will be made on cancellation after 30th September 2025.
       </span>
       <Link
         to={"/registration"}

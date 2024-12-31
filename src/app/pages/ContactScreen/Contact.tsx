@@ -1,12 +1,7 @@
-import { useEffect } from "react";
 import { assetUrl } from "../../../../assets/data/assetUrl";
 import styles from "./contact.module.css";
 
 const Contact: React.FC = () => {
-  useEffect(() => {
-    window.scrollTo(0, 400);
-  }, []);
-
   return (
     <div className={styles.mainContainer}>
       <div className={styles.imageContainer}>
