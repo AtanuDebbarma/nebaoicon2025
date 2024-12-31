@@ -21,7 +21,7 @@ export const assetUrl = {
   welcomeGradiant: welcomeGradiant,
   aboutGradiant: aboutGradiant,
   Image1:
-    "https://res.cloudinary.com/dyoefmx3t/image/upload/v1735627160/carousel1_k0fi6i.png",
+    "https://res.cloudinary.com/dyoefmx3t/image/upload/v1735659160/carousel1_fycajt.png",
   Image2:
     "https://res.cloudinary.com/dyoefmx3t/image/upload/v1735627160/carousel2_uaifqm.png",
   Image3:
