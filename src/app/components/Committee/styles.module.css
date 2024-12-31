@@ -18,11 +18,16 @@
 
 .imageContainer {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 50%;
   background-color: white;
   border-radius: 50%;
 }
-.imageContainer img {
+.cardImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   object-fit: contain;
   border-radius: 50%;
@@ -56,11 +61,11 @@
   }
 }
 @media (max-width: 490px) {
-  .heading{
+  .heading {
     font-size: 0.8em;
   }
   .textHeader {
-    font-size: 0.57em;
+    font-size: 0.55em;
   }
   .textSubHeader {
     font-size: 0.45em;

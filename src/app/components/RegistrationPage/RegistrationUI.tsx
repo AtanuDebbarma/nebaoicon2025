@@ -54,8 +54,18 @@ export const BankDetails: React.FC = () => {
     </div>
   );
 };
-
-export const RegisterButton = () => {
+type ButtonProps = {
+  marginTop?: string;
+  marginBottom?: string;
+  padding?: string;
+  form: boolean;
+};
+export const RegisterButton: React.FC<ButtonProps> = ({
+  marginTop,
+  marginBottom,
+  padding,
+  form = false,
+}) => {
   const { width } = useWindowSize();
   const jsStyles = dynamicStyles(width);
 
@@ -75,16 +85,27 @@ export const RegisterButton = () => {
   const handleMouseUp = () => setIsPressed(false);
 
   return (
-    <div style={jsStyles.buttonContainer}>
+    <div
+      style={{
+        ...jsStyles.buttonContainer,
+        marginTop: marginTop || "3%",
+        marginBottom: marginBottom || "5%",
+      }}
+    >
       <Link
-        to={"/registration_form"}
+        to={form ? "/registration_form" : "/registration"}
         style={{
           ...jsStyles.button,
+          padding: padding || "0px 15px",
           backgroundColor: isPressed
             ? "#1e7e34"
             : isHovered
-            ? "#218838"
-            : "#28a745",
+            ? form
+              ? "#218838" // Darker green for hover when form is true
+              : "#d93f02" // Darker orange for hover when form is false
+            : form
+            ? "#28a745" // Green when form is true
+            : "#ff4800", // Orange when form is false
           transform: isPressed ? "scale(0.95)" : "scale(1)",
           transition: "background-color 0.3s ease, transform 0.3s ease",
         }}
@@ -95,7 +116,7 @@ export const RegisterButton = () => {
         onTouchStart={handleMouseDown} // For touch devices
         onTouchEnd={handleMouseUp} // For touch devices
       >
-        <p>Register Now</p>
+        <p>{form ? "Register Now" : "Registration Fees"}</p>
       </Link>
     </div>
   );
@@ -119,8 +140,6 @@ const dynamicStyles = (
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "center",
-      marginTop: "3%",
-      marginBottom: "5%",
     },
     button: {
       display: "flex",
@@ -129,7 +148,6 @@ const dynamicStyles = (
       backgroundColor: "#28a745",
       textDecoration: "none",
       color: "white",
-      padding: "0px 15px",
       borderRadius: "6px",
       textAlign: "center",
       transition: "background-color 0.3s ease, transform 0.1s ease",

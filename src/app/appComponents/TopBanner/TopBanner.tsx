@@ -3,11 +3,20 @@ import useWindowSize from "../../../../utils/FindWindowSize";
 import { assetUrl } from "../../../../assets/data/assetUrl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const TopBanner: React.FC = () => {
   const { width } = useWindowSize();
   const location = useLocation();
   const isForm = location.pathname === "/registration_form";
+  const [isLoading, setIsLoading] = useState(true);
+  const imgSrc = assetUrl.topBanner;
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = imgSrc;
+    img.onload = () => setIsLoading(false);
+  }, [imgSrc]);
 
   return (
     <div>
@@ -37,9 +46,25 @@ const TopBanner: React.FC = () => {
           <div></div>
         )}
       </div>
-      <div className={styles.bannerContainer}>
-        <img src={assetUrl.topBanner} />
-      </div>
+      {isLoading ? (
+        <div
+          style={{
+            width: "100%",
+            height: "50vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            color: "#ff4800",
+            backgroundColor: "white",
+          }}
+        >
+          Loading...
+        </div>
+      ) : (
+        <div className={styles.bannerContainer}>
+          <img src={assetUrl.topBanner} />
+        </div>
+      )}
     </div>
   );
 };

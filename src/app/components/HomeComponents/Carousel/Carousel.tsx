@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import styles from "./Carousel.module.css";
 import { assetUrl } from "../../../../../assets/data/assetUrl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ClipLoader } from "react-spinners";
 
 const CustomLeftArrow = ({ onClick }: { onClick?: () => void }) => {
   return (
@@ -35,13 +36,34 @@ const CustomRightArrow = ({ onClick }: { onClick?: () => void }) => {
 };
 
 const CustomCarousel: React.FC = () => {
-  const images: string[] = [
-    assetUrl.Image1,
-    assetUrl.Image2,
-    assetUrl.Image3,
-    assetUrl.Image4,
-    assetUrl.Image5,
-  ];
+  const images = useMemo(
+    () => [
+      assetUrl.Image1,
+      assetUrl.Image2,
+      assetUrl.Image3,
+      assetUrl.Image4,
+      assetUrl.Image5,
+    ],
+    []
+  );
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    let loadedCount = 0;
+    const handleImageLoad = () => {
+      loadedCount++;
+      if (loadedCount === images.length) {
+        setIsLoading(false);
+      }
+    };
+
+    images.forEach((image) => {
+      const img = new Image();
+      img.src = image;
+      img.onload = handleImageLoad;
+      img.onerror = handleImageLoad;
+    });
+  }, [images]);
 
   const responsive = {
     desktop: {
@@ -60,34 +82,49 @@ const CustomCarousel: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <Carousel
-        swipeable={true}
-        draggable={true}
-        showDots={false}
-        responsive={responsive}
-        infinite={true}
-        autoPlay={true}
-        autoPlaySpeed={4000}
-        keyBoardControl={true}
-        customTransition="all 1s"
-        transitionDuration={1000}
-        containerClass="carousel-container"
-        removeArrowOnDeviceType={["tablet", "mobile"]}
-        customLeftArrow={<CustomLeftArrow />}
-        customRightArrow={<CustomRightArrow />}
-        dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-40-px"
-      >
-        {images.map((image, index) => (
-          <div key={index} className={styles.carouselItem}>
-            <img
-              src={image}
-              alt={`Carousel ${index + 1}`}
-              className={styles.carouselImage}
-            />
-          </div>
-        ))}
-      </Carousel>
+      {isLoading ? (
+        <div
+          style={{
+            width: "100%",
+            height: "50vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "#151515",
+          }}
+        >
+          <ClipLoader size={50} color={"#ff4800"} loading={isLoading} />
+        </div>
+      ) : (
+        <Carousel
+          swipeable={true}
+          draggable={true}
+          showDots={false}
+          responsive={responsive}
+          infinite={true}
+          autoPlay={true}
+          autoPlaySpeed={4000}
+          keyBoardControl={true}
+          customTransition="all 1s"
+          transitionDuration={1000}
+          containerClass="carousel-container"
+          removeArrowOnDeviceType={["tablet", "mobile"]}
+          customLeftArrow={<CustomLeftArrow />}
+          customRightArrow={<CustomRightArrow />}
+          dotListClass="custom-dot-list-style"
+          itemClass="carousel-item-padding-40-px"
+        >
+          {images.map((image, index) => (
+            <div key={index} className={styles.carouselItem}>
+              <img
+                src={image}
+                alt={`Carousel ${index + 1}`}
+                className={styles.carouselImage}
+              />
+            </div>
+          ))}
+        </Carousel>
+      )}
     </div>
   );
 };

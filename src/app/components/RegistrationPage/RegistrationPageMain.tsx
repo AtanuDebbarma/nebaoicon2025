@@ -1,15 +1,18 @@
 import { assetUrl } from "../../../../assets/data/assetUrl";
-import { CSSProperties } from "react";
+import { CSSProperties, useEffect } from "react";
 import { BankDetails, RegisterButton, TableBody } from "./RegistrationUI";
 
 const RegistrationPageMain = () => {
+    useEffect(() => {
+      window.scrollTo(0, 100);
+    }, []);
   const jsStyles = dynamicStyles();
   return (
     <div style={jsStyles.mainContainer}>
       <h2 style={jsStyles.header}>REGISTRATION FEES</h2>
       <TableBody />
-      <BankDetails/>
-      <RegisterButton />
+      <BankDetails />
+      <RegisterButton form={true} />
     </div>
   );
 };
