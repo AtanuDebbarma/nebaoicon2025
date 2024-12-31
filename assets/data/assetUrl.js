@@ -6,7 +6,7 @@ import {
   faEnvelope,
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
-import topBanner2 from "../banner2.png";
+import topBanner from "../top_banner.png";
 import navbarBackground from "../backgrounds/navbarBackground.jpg";
 import welcomeGradiant from "../backgrounds/welcomeGradiant.png";
 import aboutGradiant from "../backgrounds/aboutGradiant.png";
@@ -17,7 +17,7 @@ export const assetUrl = {
   hamburger: faBars,
   emailIcon: faEnvelope,
   phoneIcon: faPhone,
-  topBanner: topBanner2,
+  topBanner: topBanner,
   welcomeGradiant: welcomeGradiant,
   aboutGradiant: aboutGradiant,
   Image1:
