@@ -1,18 +1,35 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import useWindowSize from "../../../../utils/FindWindowSize";
 import { CSSProperties } from "react";
 import { Link } from "react-router-dom";
-import { assetUrl } from "../../../../assets/data/assetUrl";
+import { assetUrl } from "../../../assets/data/assetUrl";
 import styles from "../HomeComponents/AboutEvent/aboutEvent.module.css";
 import styles2 from "./regUI.module.css";
+import { ClipLoader } from "react-spinners";
 
 export const TableBody: React.FC = () => {
   const { width } = useWindowSize();
   const jsStyles = dynamicStyles(width);
 
+  const [isLoading, setIsLoading] = useState(true);
+  const imgSrc = assetUrl.table;
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = imgSrc;
+    img.onload = () => setIsLoading(false);
+    img.onerror = () => setIsLoading(false);
+  }, [imgSrc]);
+
   return (
     <div style={jsStyles.tableContainer}>
-      <img src={assetUrl.table} style={jsStyles.tableImage} />
+      {isLoading ? (
+        <div style={jsStyles.clipLoader}>
+          <ClipLoader size={50} color="#FF4800" />
+        </div>
+      ) : (
+        <img src={assetUrl.table} style={jsStyles.tableImage} />
+      )}
     </div>
   );
 };
@@ -162,6 +179,13 @@ const dynamicStyles = (
       width: deviceWidth > 780 ? "50%" : "90%",
       justifyContent: "center",
       alignItems: "center",
+    },
+    clipLoader: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      marginTop: "80%",
+      marginBottom: "110%",
     },
   };
 };

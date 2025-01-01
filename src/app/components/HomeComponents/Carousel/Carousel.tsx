@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import styles from "./Carousel.module.css";
-import { assetUrl } from "../../../../../assets/data/assetUrl";
+import { assetUrl } from "../../../../assets/data/assetUrl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ClipLoader } from "react-spinners";
 

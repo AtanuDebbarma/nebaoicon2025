@@ -1,4 +1,4 @@
-import { assetUrl } from "../../../../../assets/data/assetUrl";
+import { assetUrl } from "../../../../assets/data/assetUrl";
 import Counter from "./Counter/Counter";
 import MessageSection from "./MessageSection/MessageSection";
 import styles from "./welcomeMessage.module.css";

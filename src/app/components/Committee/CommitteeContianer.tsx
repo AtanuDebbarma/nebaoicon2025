@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import { assetUrl } from "../../../../assets/data/assetUrl";
+import { assetUrl } from "../../../assets/data/assetUrl";
 import { Card } from "./Card";
 import styles from "./styles.module.css";
 import {

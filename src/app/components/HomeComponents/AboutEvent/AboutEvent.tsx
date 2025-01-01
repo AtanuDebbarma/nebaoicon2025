@@ -1,4 +1,4 @@
-import { assetUrl } from "../../../../../assets/data/assetUrl";
+import { assetUrl } from "../../../../assets/data/assetUrl";
 import { RegisterButton } from "../../RegistrationPage/RegistrationUI";
 import styles from "./aboutEvent.module.css";
 

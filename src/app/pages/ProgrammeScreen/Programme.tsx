@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { assetUrl } from "../../../../assets/data/assetUrl";
+import { assetUrl } from "../../../assets/data/assetUrl";
 import styles from "./programme.module.css";
 import { ClipLoader } from "react-spinners";
 

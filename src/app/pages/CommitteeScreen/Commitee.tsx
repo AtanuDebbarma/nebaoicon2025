@@ -1,6 +1,6 @@
 import { CSSProperties } from "react";
 import CommitteeContianer from "../../components/Committee/CommitteeContianer";
-import { assetUrl } from "../../../../assets/data/assetUrl";
+import { assetUrl } from "../../../assets/data/assetUrl";
 
 const Committee: React.FC = () => {
   const jsStyles = dynamicStyles();

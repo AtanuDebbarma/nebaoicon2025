@@ -10,7 +10,6 @@ import topBanner from "../top_banner.png";
 import navbarBackground from "../backgrounds/navbarBackground.jpg";
 import welcomeGradiant from "../backgrounds/welcomeGradiant.png";
 import aboutGradiant from "../backgrounds/aboutGradiant.png";
-import Table from "../table.png";
 
 export const assetUrl = {
   navbarBackground: navbarBackground,
@@ -32,7 +31,8 @@ export const assetUrl = {
     "https://res.cloudinary.com/dyoefmx3t/image/upload/v1735627161/carousel5_aeytje.png",
   rightArrow: faAngleRight,
   leftArrow: faAngleLeft,
-  table: Table,
+  table:
+    "https://res.cloudinary.com/dyoefmx3t/image/upload/v1735707318/table_o1fs1t.png",
   exclaim: faCircleExclamation,
   QRCode:
     "https://res.cloudinary.com/dyoefmx3t/image/upload/v1735546831/QR_wtcmzl.jpg",

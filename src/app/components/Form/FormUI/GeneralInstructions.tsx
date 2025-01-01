@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "../formUi.module.css";
-import { assetUrl } from "../../../../../assets/data/assetUrl";
+import { assetUrl } from "../../../../assets/data/assetUrl";
 import { Link } from "react-router-dom";
 
 export const GeneralInstructions = () => {

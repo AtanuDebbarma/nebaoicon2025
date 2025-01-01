@@ -1,4 +1,4 @@
-import { assetUrl } from "../../../../assets/data/assetUrl";
+import { assetUrl } from "../../../assets/data/assetUrl";
 import { CSSProperties, useEffect } from "react";
 import { BankDetails, RegisterButton, TableBody } from "./RegistrationUI";
 

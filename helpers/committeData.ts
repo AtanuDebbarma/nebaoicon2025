@@ -1,4 +1,4 @@
-import { assetUrl } from "../assets/data/assetUrl";
+import { assetUrl } from "../src/assets/data/assetUrl";
 
 export interface CommitteeMember {
   row: number;

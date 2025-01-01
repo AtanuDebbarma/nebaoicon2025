@@ -1,7 +1,7 @@
 import { CSSProperties } from "react";
 import styles from "../formUi.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { assetUrl } from "../../../../../assets/data/assetUrl";
+import { assetUrl } from "../../../../assets/data/assetUrl";
 
 interface FormInputsProps {
   error?: string;

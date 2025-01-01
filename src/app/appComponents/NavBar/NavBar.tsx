@@ -3,7 +3,7 @@ import useWindowSize from "../../../../utils/FindWindowSize";
 import { useEffect, useState } from "react";
 import NavbarNormal from "./NavbarNormal";
 import NavBarModal from "./NavBarModal";
-import { assetUrl } from "../../../../assets/data/assetUrl";
+import { assetUrl } from "../../../assets/data/assetUrl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const NavBar: React.FC = () => {

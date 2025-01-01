@@ -1,6 +1,6 @@
 import styles from "./topbanner.module.css";
 import useWindowSize from "../../../../utils/FindWindowSize";
-import { assetUrl } from "../../../../assets/data/assetUrl";
+import { assetUrl } from "../../../assets/data/assetUrl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
