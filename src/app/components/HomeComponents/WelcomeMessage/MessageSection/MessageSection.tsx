@@ -40,12 +40,12 @@ const MessageSection: React.FC = () => {
         <p style={{ textAlign: "left" }}>
           <strong>DR. SANKAR CHAKRABORTY</strong>
           <br />
-          President, NEBAOICON-2025
+          Organizing President
         </p>
         <p style={{ textAlign: "right" }}>
           <strong>DR. BIDHAN DAS</strong>
           <br />
-          Secretary, NEBAOICON-2025
+          Organizing Secretary
         </p>
       </span>
     </div>
