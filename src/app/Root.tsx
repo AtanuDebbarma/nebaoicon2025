@@ -11,7 +11,8 @@ import RegistrationFrom from "./pages/RegistrationForm/RegistrationFrom";
 
 const Root: React.FC = () => {
   return (
-    <Router basename="/nebaoicon2025">
+    // <Router basename="/nebaoicon2025">
+    <Router>
       <TopBanner />
       <NavBar />
       <Routes>
