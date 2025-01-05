@@ -7,8 +7,13 @@
 
   <url>
     <loc>https://www.nebaoicon2025.in/</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <priority>1.0</priority>
+    <image:image>
+    <image:loc>https://www.nebaoicon2025.in/logo512.png</image:loc>
+    <image:caption>Official NEBAOICON 2025 Logo</image:caption>
+    <image:title>NEBAOICON Logo</image:title>
+  </image:image>
   </url>
     <url>
     <loc>https://www.nebaoicon2025.in/home</loc>
@@ -17,22 +22,22 @@
   </url>
 <url>
     <loc>https://www.nebaoicon2025.in/registration</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.nebaoicon2025.in/registration_form</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <priority>0.8</priority>
   </url>
     <url>
     <loc>https://www.nebaoicon2025.in/committee</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <priority>0.7</priority>
   </url>
       <url>
     <loc>https://www.nebaoicon2025.in/contact</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-01-05</lastmod>
     <priority>0.6</priority>
   </url>
 

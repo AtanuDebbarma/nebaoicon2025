@@ -28,7 +28,11 @@ export const TableBody: React.FC = () => {
           <ClipLoader size={50} color="#FF4800" />
         </div>
       ) : (
-        <img src={assetUrl.table} style={jsStyles.tableImage} />
+        <img
+          src={assetUrl.table}
+          style={jsStyles.tableImage}
+          alt="Nebaoicon2025 Registration Fees"
+        />
       )}
     </div>
   );
@@ -39,7 +43,7 @@ export const BankDetails: React.FC = () => {
   return (
     <div className={styles.aboutContainer}>
       <div className={styles.aboutWrapper}>
-        <div className={styles.headerWrapper}>
+        <div className={styles.headerWrapper} style={jsStyles.headerWrapper}>
           <h4>BANK DETAILS</h4>
         </div>
         <div className={styles2.detailsContainer}>
@@ -64,7 +68,11 @@ export const BankDetails: React.FC = () => {
             <span className={styles2.qrCode}>
               UPI ID: associationofotolaryngologist@sbi
             </span>
-            <img src={assetUrl.QRCode} className={styles2.qrImage} />
+            <img
+              src={assetUrl.QRCode}
+              className={styles2.qrImage}
+              alt="AOI-TSB Bank QR Code"
+            />
           </div>
         </div>
       </div>
@@ -143,14 +151,20 @@ const dynamicStyles = (
   deviceWidth: number
 ): { [key: string]: CSSProperties } => {
   return {
+    headerWrapper: {
+      justifyContent: deviceWidth > 780 ? "flex-start" : "center",
+      alignItems: deviceWidth > 780 ? "flex-start" : "center",
+      marginLeft: deviceWidth > 780 ? "2%" : "0%",
+    },
     tableContainer: {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
     },
     tableImage: {
-      width: deviceWidth > 700 ? "80%" : "90%",
+      width: deviceWidth > 700 ? "80%" : "86%",
       objectFit: "contain",
+      marginBottom: "10%",
     },
     buttonContainer: {
       display: "flex",
@@ -170,7 +184,7 @@ const dynamicStyles = (
       transition: "background-color 0.3s ease, transform 0.1s ease",
     },
     paragraphWrapper: {
-      marginLeft: "1%",
+      marginLeft: deviceWidth > 780 ? "1%" : "10%",
       width: "50%",
     },
     qrWrapper: {

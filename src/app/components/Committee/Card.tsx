@@ -13,7 +13,7 @@ export const Card: React.FC<CardProps> = React.memo(
   ({ imageSrc, textHeader, textSubHeader1, textSubHeader2 }) => {
     return (
       <div className={styles.cardContainer}>
-        <CardImage imageSrc={imageSrc} />
+        <CardImage imageSrc={imageSrc} textHeader={textHeader} />
         <CardText
           textHeader={textHeader}
           textSubHeader1={textSubHeader1}
@@ -24,7 +24,10 @@ export const Card: React.FC<CardProps> = React.memo(
   }
 );
 
-const CardImage: React.FC<{ imageSrc: string }> = ({ imageSrc }) => {
+const CardImage: React.FC<{ imageSrc: string; textHeader: string }> = ({
+  imageSrc,
+  textHeader,
+}) => {
   const [isLoading, setIsLoading] = useState(true);
   const { width } = useWindowSize();
 
@@ -59,11 +62,7 @@ const CardImage: React.FC<{ imageSrc: string }> = ({ imageSrc }) => {
           <ClipLoader size={20} color="#ff4800" />
         </div>
       ) : (
-        <img
-          src={imageSrc}
-          alt="Committee Member"
-          className={styles.cardImage}
-        />
+        <img src={imageSrc} alt={textHeader} className={styles.cardImage} />
       )}
     </div>
   );

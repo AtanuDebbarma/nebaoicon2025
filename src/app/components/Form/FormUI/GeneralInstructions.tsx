@@ -18,7 +18,7 @@ export const GeneralInstructions = () => {
         <FontAwesomeIcon icon={assetUrl.rightArrow} />
         <h6>&nbsp; How to register</h6>
       </span>
-      <span className={styles.instructionsPoints} style={{marginTop:"0px"}}>
+      <span className={styles.instructionsPoints} style={{ marginTop: "0px" }}>
         <strong>BANK DETAILS:</strong>
       </span>
       <p className={styles.instructionsPoints}>
@@ -30,10 +30,14 @@ export const GeneralInstructions = () => {
         IFSC Code :SBIN0004545 <br />
         Branch : Kunjaban
       </p>
-      <span className={styles.instructionsPoints} style={{marginTop:"0px"}}>
+      <span className={styles.instructionsPoints} style={{ marginTop: "0px" }}>
         <strong>UPI ID:</strong>&nbsp;associationofotolaryngologist@sbi
       </span>
-      <img src={assetUrl.QRCode} className={styles.qrImage}/>
+      <img
+        src={assetUrl.QRCode}
+        className={styles.qrImage}
+        alt="AOI-TSB Bank QR Code"
+      />
       <span className={styles.instructionsPoints}>
         1. Make payment to the above bank account or UPI ID.
       </span>
@@ -65,7 +69,9 @@ export const GeneralInstructions = () => {
         onClick={() => window.scrollTo(0, 0)}
       >
         <FontAwesomeIcon icon={assetUrl.rightArrow} />
-        <h6 style={{ color: "blue", marginLeft:"1%"}} >Registration Fee Details</h6>
+        <h6 style={{ color: "blue", marginLeft: "1%" }}>
+          Registration Fee Details
+        </h6>
       </Link>
     </div>
   );

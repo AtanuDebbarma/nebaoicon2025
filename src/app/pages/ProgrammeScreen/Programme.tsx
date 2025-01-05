@@ -23,7 +23,11 @@ const Programme: React.FC = () => {
             <ClipLoader size={50} color="#ff4800" />
           </div>
         ) : (
-          <img src={imgSrc} className={styles.image} />
+          <img
+            src={imgSrc}
+            className={styles.image}
+            alt="International convention centre (Agartala international fair ground)"
+          />
         )}
       </div>
     </div>

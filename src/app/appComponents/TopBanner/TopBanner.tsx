@@ -62,7 +62,7 @@ const TopBanner: React.FC = () => {
         </div>
       ) : (
         <div className={styles.bannerContainer}>
-          <img src={assetUrl.topBanner} />
+          <img src={assetUrl.topBanner} alt="36th Nebaoicon 2025" />
         </div>
       )}
     </div>
