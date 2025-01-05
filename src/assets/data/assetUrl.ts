@@ -32,8 +32,7 @@ export const assetUrl = {
     "https://res.cloudinary.com/dyoefmx3t/image/upload/v1735627161/carousel5_aeytje.png",
   rightArrow: faAngleRight,
   leftArrow: faAngleLeft,
-  table:
-  table,
+  table: table,
   exclaim: faCircleExclamation,
   QRCode:
     "https://res.cloudinary.com/dyoefmx3t/image/upload/v1735546831/QR_wtcmzl.jpg",
