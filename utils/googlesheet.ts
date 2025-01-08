@@ -143,7 +143,7 @@ export const checkForDuplicates = async (
     return {
       phoneExists: false,
       transactionExists: false,
-      error: "Error checking for duplicates",
+      error: "Unknown error occurred. Please try again or contact us.",
     };
   }
 };
