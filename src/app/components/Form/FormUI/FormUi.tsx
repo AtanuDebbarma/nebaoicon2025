@@ -10,7 +10,7 @@ export interface FormValues {
   name: string;
   designation: string;
   registrationNo: string;
-  accompanyingPersons:string;
+  accompanyingPersons: string;
   address: string;
   city: string;
   state: string;
@@ -26,7 +26,7 @@ export type Errors = {
   name?: string;
   designation?: string;
   registrationNo?: string;
-  accompanyingPersons?:string;
+  accompanyingPersons?: string;
   address?: string;
   city?: string;
   state?: string;
@@ -45,7 +45,7 @@ export const Form: React.FC = () => {
     name: "",
     designation: "",
     registrationNo: "",
-    accompanyingPersons:"",
+    accompanyingPersons: "",
     address: "",
     city: "",
     state: "",
@@ -62,7 +62,7 @@ export const Form: React.FC = () => {
     name: "",
     designation: "",
     registrationNo: "",
-    accompanyingPersons:"",
+    accompanyingPersons: "",
     address: "",
     city: "",
     state: "",
@@ -219,7 +219,15 @@ export const Form: React.FC = () => {
         of department.
       </p>
       {errors.error && (
-        <span className={styles.note} style={{ color: "red" }}>
+        <span
+          className={styles.note}
+          style={{
+            color: "red",
+            marginTop: "1%",
+            textDecoration: "underline",
+            lineHeight: "inherit",
+          }}
+        >
           {errors.error}
         </span>
       )}
