@@ -8,6 +8,7 @@ import Programme from "./pages/ProgrammeScreen/Programme";
 import Committee from "./pages/CommitteeScreen/Commitee";
 import FooterMain from "./appComponents/Footer/FooterMain";
 import RegistrationFrom from "./pages/RegistrationForm/RegistrationFrom";
+import Accomodation from "./pages/AccomodationScreen/Accomodation";
 
 const Root: React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const Root: React.FC = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/committee" element={<Committee />} />
         <Route path="/programme" element={<Programme />} />
+        <Route path="/accomodation" element={<Accomodation />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/registration_form" element={<RegistrationFrom />} />
         <Route path="/contact" element={<Contact />} />

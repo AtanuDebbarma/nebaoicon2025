@@ -12,6 +12,7 @@ const NavbarNormal: React.FC = () => {
     location.pathname === "/home" || location.pathname === "/";
   const isCommitteeActive = location.pathname === "/committee";
   const isProgrammeActive = location.pathname === "/programme";
+  const isAccomodationActive = location.pathname === "/accomodation";
   const isRegistrationActive = location.pathname === "/registration";
   const isContactActive = location.pathname === "/contact";
   const isForm = location.pathname === "/registration_form";
@@ -43,6 +44,15 @@ const NavbarNormal: React.FC = () => {
       >
         <h2 className={styles.navButtonText} style={jsStyles.linkText}>
           Programme
+        </h2>
+      </Link>
+      <Link
+        to={"/accomodation"}
+        className={styles.navButtons}
+        style={isAccomodationActive ? jsStyles.activeBorder : {}}
+      >
+        <h2 className={styles.navButtonText} style={jsStyles.linkText}>
+          Accomodation
         </h2>
       </Link>
       <Link
