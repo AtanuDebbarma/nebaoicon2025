@@ -29,19 +29,6 @@ const Accommodation: React.FC = () => {
             </td>
           </tr>
           <tr>
-            <td>Hotel Royal Hub</td>
-            <td>07005150717</td>
-            <td>
-              <a
-                href="https://maps.app.goo.gl/Atky7ZeS7mT1ipaYA"
-                target="blank"
-                rel="noopener noreferrer"
-              >
-                Click Here
-              </a>
-            </td>
-          </tr>
-          <tr>
             <td>Hotel Noah Spire</td>
             <td>09245049595</td>
             <td>
@@ -82,10 +69,23 @@ const Accommodation: React.FC = () => {
           </tr>
           <tr>
             <td>Hotel Gloria Inn</td>
-            <td>01246201186</td>
+            <td>09856686682</td>
             <td>
               <a
                 href="https://maps.app.goo.gl/VAfAq9M3LRa6LLoT9"
+                target="blank"
+                rel="noopener noreferrer"
+              >
+                Click Here
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>Hotel Royal Hub</td>
+            <td>07005150717</td>
+            <td>
+              <a
+                href="https://maps.app.goo.gl/Atky7ZeS7mT1ipaYA"
                 target="blank"
                 rel="noopener noreferrer"
               >
