@@ -20,9 +20,9 @@ const Root: React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/committee" element={<Committee />} />
+        <Route path="/registration" element={<Registration />} />
         <Route path="/programme" element={<Programme />} />
         <Route path="/accomodation" element={<Accomodation />} />
-        <Route path="/registration" element={<Registration />} />
         <Route path="/registration_form" element={<RegistrationFrom />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

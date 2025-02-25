@@ -22,6 +22,13 @@ const NavBarModal: React.FC<toggleType> = ({ toggleModal }) => {
           Committee
         </Link>
         <Link
+          to={"/registration"}
+          className={styles.modalLink}
+          onClick={toggleModal}
+        >
+          Registration
+        </Link>
+        <Link
           to={"/programme"}
           className={styles.modalLink}
           onClick={toggleModal}
@@ -35,13 +42,7 @@ const NavBarModal: React.FC<toggleType> = ({ toggleModal }) => {
         >
           Accomodation
         </Link>
-        <Link
-          to={"/registration"}
-          className={styles.modalLink}
-          onClick={toggleModal}
-        >
-          Registration
-        </Link>
+
         <Link
           to={"/contact"}
           className={styles.modalLink}

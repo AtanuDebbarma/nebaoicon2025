@@ -28,7 +28,7 @@ const MessageSection: React.FC = () => {
         a grand success.
         <br />
         <br />
-        Looking forward to your whole hearted cooperation.
+        Anticipating your whole hearted.
       </p>
       <p
         className={styles.paragraph}

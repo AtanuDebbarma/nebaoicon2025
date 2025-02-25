@@ -38,6 +38,15 @@ const NavbarNormal: React.FC = () => {
         </h2>
       </Link>
       <Link
+        to={"/registration"}
+        className={styles.navButtons}
+        style={isRegistrationActive ? jsStyles.activeBorder : {}}
+      >
+        <h2 className={styles.navButtonText} style={jsStyles.linkText}>
+          Registration
+        </h2>
+      </Link>
+      <Link
         to={"/programme"}
         className={styles.navButtons}
         style={isProgrammeActive ? jsStyles.activeBorder : {}}
@@ -53,15 +62,6 @@ const NavbarNormal: React.FC = () => {
       >
         <h2 className={styles.navButtonText} style={jsStyles.linkText}>
           Accomodation
-        </h2>
-      </Link>
-      <Link
-        to={"/registration"}
-        className={styles.navButtons}
-        style={isRegistrationActive ? jsStyles.activeBorder : {}}
-      >
-        <h2 className={styles.navButtonText} style={jsStyles.linkText}>
-          Registration
         </h2>
       </Link>
       <Link
