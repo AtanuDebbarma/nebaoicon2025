@@ -31,14 +31,14 @@ const FooterMain = () => {
         <div className={styles.addressWrapper}>
           <p className={styles.addressHeader}>Reach us</p>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14603.36936044113!2d91.26218810692951!3d23.788627945012006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3753f4c1835692cf%3A0x31334f2f52fb2e28!2sAgartala%20International%20Fair%20Ground%2C%20Hapania!5e0!3m2!1sen!2sin!4v1729518090876!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.966649273091!2d91.2783551!3d23.855318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3753f6a7c649aec7%3A0x29f33b2f01b256bf!2sPragna%20Bhavan!5e0!3m2!1sen!2sin!4v1748013800439!5m2!1sen!2sin"
             width={width <= 700 ? "250" : "350"}
             height={width <= 700 ? "200" : "250"}
             style={{ border: 0, borderRadius: "6px" }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+          />
         </div>
       </div>
       <div

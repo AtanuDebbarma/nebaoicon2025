@@ -12,7 +12,7 @@ export const committeeData: CommitteeMember[] = [
   {
     row: 2,
     imageSrc: assetUrl.sankarChakraborty_2,
-    textHeader: "Dr. Sankar Chakraborty",
+    textHeader: "Dr. Sankar Chakraborti",
     textSubHeader1: "Organizing President",
   },
   {

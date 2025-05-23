@@ -17,9 +17,8 @@ const AboutEvent: React.FC = () => {
             36th Annual Conference of NEBAOI – 2025.
             <br />
             <br />
-            Venue: International convention centre (Agartala international fair
-            ground) , <br />
-            Hapania, Agartala
+            Venue: Pragna Bhavan Convention Center, <br />
+            Gorkhabasti, 79 Tilla, Agartala, Tripura.
             <br />
             Date: 14th - 15th November 2025.
           </p>

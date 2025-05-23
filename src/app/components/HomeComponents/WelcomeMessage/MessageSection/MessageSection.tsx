@@ -38,7 +38,7 @@ const MessageSection: React.FC = () => {
       </p>
       <span className={styles.welcomeFooter}>
         <p style={{ textAlign: "left" }}>
-          <strong>DR. SANKAR CHAKRABORTY</strong>
+          <strong>DR. SANKAR CHAKRABORTI</strong>
           <br />
           Organizing President
         </p>

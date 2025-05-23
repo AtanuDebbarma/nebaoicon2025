@@ -29,6 +29,32 @@ const Accommodation: React.FC = () => {
             </td>
           </tr>
           <tr>
+            <td>Ginger Agartala</td>
+            <td>03812411333</td>
+            <td>
+              <a
+                href="https://maps.app.goo.gl/8JgCKNGBX4azvPM17"
+                target="blank"
+                rel="noopener noreferrer"
+              >
+                Click Here
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>The Parkline Hotel</td>
+            <td>09863258741</td>
+            <td>
+              <a
+                href="https://maps.app.goo.gl/6iZhbUTaFkzV3oCWA"
+                target="blank"
+                rel="noopener noreferrer"
+              >
+                Click Here
+              </a>
+            </td>
+          </tr>
+          <tr>
             <td>Hotel Noah Spire</td>
             <td>09245049595</td>
             <td>
@@ -60,32 +86,6 @@ const Accommodation: React.FC = () => {
             <td>
               <a
                 href="https://maps.app.goo.gl/nASMgjHdjYCVgcUf8"
-                target="blank"
-                rel="noopener noreferrer"
-              >
-                Click Here
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>Hotel Gloria Inn</td>
-            <td>09856686682</td>
-            <td>
-              <a
-                href="https://maps.app.goo.gl/VAfAq9M3LRa6LLoT9"
-                target="blank"
-                rel="noopener noreferrer"
-              >
-                Click Here
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>Hotel Royal Hub</td>
-            <td>07005150717</td>
-            <td>
-              <a
-                href="https://maps.app.goo.gl/Atky7ZeS7mT1ipaYA"
                 target="blank"
                 rel="noopener noreferrer"
               >

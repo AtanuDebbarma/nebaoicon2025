@@ -16,7 +16,7 @@ const Programme: React.FC = () => {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.imageContainer}>
-        <h1>Programme:</h1>
+        <h1>Programme</h1>
         <h2>To Be Announced</h2>
         {isLoading ? (
           <div className={styles.clipLoader}>

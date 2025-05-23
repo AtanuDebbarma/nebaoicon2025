@@ -21,7 +21,7 @@ export const assetUrl = {
   welcomeGradiant: welcomeGradiant,
   aboutGradiant: aboutGradiant,
   Image1:
-    "https://res.cloudinary.com/dyoefmx3t/image/upload/v1735659160/carousel1_fycajt.png",
+    "https://res.cloudinary.com/dyoefmx3t/image/upload/v1748013327/Carousel1_l69llo.png",
   Image2:
     "https://res.cloudinary.com/dyoefmx3t/image/upload/v1735627160/carousel2_uaifqm.png",
   Image3:
@@ -37,7 +37,7 @@ export const assetUrl = {
   QRCode:
     "https://res.cloudinary.com/dyoefmx3t/image/upload/v1735546831/QR_wtcmzl.jpg",
   programPhoto:
-    "https://res.cloudinary.com/dyoefmx3t/image/upload/v1731142531/new_hhwsxg.png",
+    "https://res.cloudinary.com/dyoefmx3t/image/upload/v1748014246/45e8cc02-c67c-41a9-af19-ed720d411fc7.png",
   contactUsPhoto:
     "https://res.cloudinary.com/dyoefmx3t/image/upload/v1731142531/new_2_ntkttm.png",
   promoteshRoy_1:
