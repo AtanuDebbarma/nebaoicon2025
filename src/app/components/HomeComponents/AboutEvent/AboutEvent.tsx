@@ -18,7 +18,7 @@ const AboutEvent: React.FC = () => {
             <br />
             <br />
             Venue: Pragna Bhavan Convention Center, <br />
-            Gorkhabasti, 79 Tilla, Agartala, Tripura.
+            Agartala, Tripura.
             <br />
             Date: 14th - 15th November 2025.
           </p>
