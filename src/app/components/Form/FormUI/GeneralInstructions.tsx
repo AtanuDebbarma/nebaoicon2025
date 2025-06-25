@@ -9,7 +9,7 @@ export const GeneralInstructions = () => {
       <span className={styles.formHeader}>GENERAL INSTRUCTIONS</span>
       <span className={styles.instructionsH6Span}>
         <FontAwesomeIcon icon={assetUrl.rightArrow} />
-        <h6>
+        <h6 style={{ color: "red" }}>
           &nbsp; Filled up form submission is mandatory to consider completion
           of registration process.
         </h6>
@@ -44,7 +44,7 @@ export const GeneralInstructions = () => {
       <span className={styles.instructionsPoints}>
         2. Get the Transaction ID
       </span>
-      <span className={styles.instructionsPoints}>
+      <span className={styles.instructionsPoints} style={{color: "red"}}>
         3. Fill out the form with your details and Transaction ID from the
         payment receipt.
       </span>

@@ -11,7 +11,6 @@ const RegistrationPageMain = () => {
     <div style={jsStyles.mainContainer}>
       <h2 style={jsStyles.header}>REGISTRATION FEES</h2>
       <TableBody />
-      <BankDetails />
       <RegisterButton form={true} />
     </div>
   );

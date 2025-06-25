@@ -113,7 +113,7 @@ export const RegisterButton: React.FC<ButtonProps> = ({
     <div
       style={{
         ...jsStyles.buttonContainer,
-        marginTop: marginTop || "3%",
+        marginTop: marginTop || "0%",
         marginBottom: marginBottom || "5%",
       }}
     >
